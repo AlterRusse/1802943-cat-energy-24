@@ -2,11 +2,12 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Cat-Energy</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <div class="div-container">
+    <div class="container">
       <header class="page-header">
         <nav class="main-nav">
           <a class="page-header__logo">
@@ -18,25 +19,23 @@
             <span class="visually-hidden">открыть меню</span>
           </button>
           <!-- Для открытия всплывающего меню удалить класс main-nav__wrap--closed -->
-          <div class="main-nav__wrap main-nav__wrap--closed">
-            <ul class="main-nav__list site-list">
-              <li class="site-list__item site-list__item--active">
-                <a>
-                  главная
-                </a>
-              </li>
-              <li class="site-list__item">
-                <a href="catalog.html">
-                  каталог продукции
-                </a>
-              </li>
-              <li class="site-list__item">
-                <a href="form.html">
-                  подобрать программу
-                </a>
-              </li>
-            </ul>
-          </div>
+          <ul class="main-nav__list main-nav__list--closed site-list">
+            <li class="site-list__item site-list__item--active">
+              <a>
+                главная
+              </a>
+            </li>
+            <li class="site-list__item">
+              <a href="catalog.html">
+                каталог продукции
+              </a>
+            </li>
+            <li class="site-list__item">
+              <a href="form.html">
+                подобрать программу
+              </a>
+            </li>
+          </ul>
         </nav>
       </header>
 
@@ -96,40 +95,44 @@
 
         <section class="examples">
           <h2 class="examples__title title title--big-tall title--black">Живой пример</h2>
-          <p class="examples__text">
-            Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
-            Отличный результат без изнуряющих тренировок!
-            При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
-          </p>
-          <div class="examples__stats-wrap"> <!--Сдесь намучу grid-->
-            <p class="examples__item-box">
-              5 КГ
-              <span>снижение веса</span>
-            </p>
-            <p class="examples__item-box">
-              60 ДНЕЙ
-              <span>затрачено времени</span>
-            </p>
-            <p class="examples__item-text">
-              Затраты на питание: 15 000 РУБ.
-            </p>
-          </div>
-          <img src="img/fat-cat.png" alt="Весьма упитанный кот">
-          <div class="examples__buttons-wrap until-after">
-            <button class="until-after__button until-after__button--before" type="button">
-              было
-            </button>
-            <div class="until-after__range-wrap"></div>
-            <button class="until-after__button until-after__button--after" type="button">
-              стало
-            </button>
+          <div class="examples__wrap">
+            <div class="examples__text-wrap">
+              <p class="examples__text">
+                Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
+                Отличный результат без изнуряющих тренировок!
+                При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
+              </p>
+              <div class="examples__stats-wrap">
+                <p class="examples__item-box">
+                  5 КГ
+                  <span>снижение веса</span>
+                </p>
+                <p class="examples__item-box">
+                  60 ДНЕЙ
+                  <span>затрачено времени</span>
+                </p>
+                <p class="examples__item-text">
+                  Затраты на питание: 15 000 РУБ.
+                </p>
+              </div>
+            </div>
+            <img src="img/fat-cat.png" alt="Весьма упитанный кот">
+            <div class="examples__buttons-wrap until-after">
+              <button class="until-after__button until-after__button--before" type="button">
+                было
+              </button>
+              <div class="until-after__range-wrap"></div>
+              <button class="until-after__button until-after__button--after" type="button">
+                стало
+              </button>
+            </div>
           </div>
         </section>
 
         <footer class="contacts">
-          <div class="contacts__content-wrap"> <!--обертка для флекса-->
+          <div class="contacts__content-wrap">
             <h2 class="contacts__title title title--small-tall title--black-one title--uppercase">приглашаем к сотрудничеству дилеров!</h2>
-            <address class="contacts__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+            <address class="contacts__adress">ул. Большая Конюшенная, д. 19/8 <br> Санкт-Петербург</address>
           </div>
           <img src="img/shop-map.png" alt="Местонахождение магазина">
         </footer>

@@ -2,10 +2,33 @@
   &--grey {
     color: @bg-lite-grey;
   }
+
+  img {
+    @media (min-width: @tablet-width) {
+      width: 768px;
+      height: 400px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 1440px;
+      height: 400px;
+    }/*карта выглядит не очень))*/
+  }
 }
 
 .contacts__content-wrap {
+  display: flex;
   padding: 26px 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 56px 70px 63px;
+    width: 768px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 60px 80px 63px;
+    width: 565px;
+  }
 }
 
 .contacts__adress {

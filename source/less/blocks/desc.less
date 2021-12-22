@@ -6,4 +6,15 @@
   .clear-list();
 
   padding-left: 80px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.desc__item {
+  @media (min-width: @tablet-width) {
+    width: 245px;
+  }
 }

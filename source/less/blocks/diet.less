@@ -1,11 +1,26 @@
 .diet__list {
   .clear-list();
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 570px 570px;
+    gap: 80px;
+    justify-content: center;
+  }
 }
 
 .diet__item {
   margin: 20px;
   padding: 21px 33px 22px 20px;
   background-color: @bg-lite-grey;
+
+  @media (min-width: @tablet-width) {
+    margin: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+  }
 }
 
 .diet__link {
