@@ -1,3 +1,15 @@
+.diet {
+  padding: 0 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 110px;
+  }
+}
+
 .diet__list {
   .clear-list();
 
@@ -10,12 +22,23 @@
 }
 
 .diet__item {
-  margin: 20px;
-  padding: 21px 33px 22px 20px;
+  width: 280px;
   background-color: @bg-lite-grey;
 
   @media (min-width: @tablet-width) {
-    margin: 30px;
+    width: 708px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 570px;
+  }
+}
+
+.diet__item:not(:last-child) {
+  margin-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 30px;
   }
 
   @media (min-width: @desktop-width) {
@@ -26,4 +49,16 @@
 .diet__link {
   text-transform: uppercase;
   color: @black;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.diet__text {
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }

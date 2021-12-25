@@ -12,27 +12,30 @@
     @media (min-width: @desktop-width) {
       width: 1440px;
       height: 400px;
-    }/*карта выглядит не очень))*/
+    }
   }
 }
 
 .contacts__content-wrap {
   display: flex;
-  padding: 26px 20px;
+  justify-content: space-between;
+  padding: 0 20px;
 
   @media (min-width: @tablet-width) {
-    padding: 56px 70px 63px;
-    width: 768px;
+    padding: 0 70px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 60px 80px 63px;
-    width: 565px;
+    padding: 0 80px;
   }
 }
 
 .contacts__adress {
-  line-height: 20px;
   font-family: "Arial", sans-serif;
   font-style: normal;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+  }
 }

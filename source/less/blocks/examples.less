@@ -1,19 +1,17 @@
 .examples {
   background-color: @bg-lite-grey;
-  padding: 25px 20px 40px;
+  padding: 0 20px;
 
   @media (min-width: @tablet-width) {
-    background-color: @white;
+    height: 1080px;
+    background: linear-gradient(to bottom, @white 619px, @bg-lite-grey 462px);
+    padding: 0 30px;
   }
 
   @media (min-width: @desktop-width) {
-    background-color: @bg-lite-grey;
-  }
-}
-
-.examples__title {
-  @media (min-width: @desktop-width) {
-    background-color: @white;
+    height: 598px;
+    padding: 0 110px;
+    background: linear-gradient(to bottom, @white 136px, @bg-lite-grey 462px);/*нет границы почему-то))*/
   }
 }
 
@@ -25,6 +23,11 @@
 }
 
 .examples__text-wrap {
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
   @media (min-width: @desktop-width) {
     display: flex;
     flex-wrap: wrap;
@@ -48,9 +51,4 @@
 .examples__buttons-wrap {
   display: flex;
   justify-content: center;
-
-  @media (min-width: @tablet-width) {
-    background-color: @bg-lite-grey;
-    height: 100px; /*временная высота*/
-  }
 }

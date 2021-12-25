@@ -1,27 +1,50 @@
 .intro {
+  background: linear-gradient(to bottom, @bg-green 302px, @white 158px);
+  padding-left: 20px;
+
+  @media (min-width: @tablet-width) {
+    background: none;
+    padding-left: 117px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 190px;
+  }
+
   img {
     margin-bottom: 138px;
+
+    @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
+      width: 709px;
+      height: 609px;
+    }
   }
 }
 
 .intro__wrap {
-  background-image: url("../img/tongue-cat.jpg");
-  background-repeat: no-repeat;
-  background-size: 100% auto;
-  background-color: @bg-green;
   color: @white;
-  padding: 27px 35px 0;
+}
+
+.intro__title {
+  padding-left: 16px;
 
   @media (min-width: @tablet-width) {
-    background-image: none;
-    background-color: @white;
-    padding: 0 120px;
+    color: @black;
+    font-size: 60px;
+    line-height: 60px;
   }
 }
 
 .intro__text {
+  padding-left: 16px;
   line-height: 14px;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    color: @black;
+    font-size: 20px;
+    line-height: 22px;
+  }
 }
 
 .intro__form-button {
