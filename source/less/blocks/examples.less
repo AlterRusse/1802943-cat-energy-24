@@ -1,21 +1,42 @@
 .examples {
   background-color: @bg-lite-grey;
-  padding: 0 20px;
 
   @media (min-width: @tablet-width) {
-    height: 1080px;
-    background: linear-gradient(to bottom, @white 619px, @bg-lite-grey 462px);
-    padding: 0 30px;
+    background-color: @white;
   }
 
   @media (min-width: @desktop-width) {
-    height: 598px;
     padding: 0 110px;
-    background: linear-gradient(to bottom, @white 136px, @bg-lite-grey 462px);/*нет границы почему-то))*/
+  }
+
+  .examples__container {
+    padding: 0 20px;
+
+    @media (min-width: @tablet-width) {
+      width: 100%;
+      padding: 0 30px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding: 0 110px;
+    }
   }
 }
 
 .examples__wrap {
+  width: 280px;
+
+  img {
+    max-width: 100%;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin: 0 auto;
+    width: 708px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
   @media (min-width: @desktop-width) {
     display: flex;
     flex-wrap: wrap; /*потом опущу кнопки, картинку позиционировать абсолютно*/
@@ -31,17 +52,12 @@
   @media (min-width: @desktop-width) {
     display: flex;
     flex-wrap: wrap;
-    width: 436px;
   }
 }
 
 .examples__stats-wrap {
   display: flex;
   flex-wrap: wrap;
-
-  @media (min-width: @tablet-width) {
-    width: 708px;
-  }
 
   @media (min-width: @desktop-width) {
     width: 366px;
@@ -51,4 +67,12 @@
 .examples__buttons-wrap {
   display: flex;
   justify-content: center;
+}
+
+.examples__grad {
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    background-color: @bg-lite-grey;
+  }
 }
