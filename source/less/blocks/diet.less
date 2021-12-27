@@ -1,6 +1,13 @@
 .diet__list {
   .clear-list();
+  
+  width: 280px;
+  margin: 0 auto;
 
+  @media (min-width: @tablet-width) {
+    width: 708px;
+  }
+  
   @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: 570px 570px;
@@ -10,6 +17,7 @@
 }
 
 .diet__item {
+  margin: 0;
   width: 280px;
   background-color: @bg-lite-grey;
 
