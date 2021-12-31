@@ -2,7 +2,6 @@
   background: linear-gradient(to bottom, @bg-green 302px, @white 158px);
 
   @media (min-width: @tablet-width) {
-    padding-left: 87px;
     background: none;
   }
 
@@ -14,11 +13,20 @@
       width: 708px;
       height: 609px;
     }
+
+    @media (min-width: @desktop-width) {
+      width: 552px;
+      height: 499px;
+    }
   }
 }
 
 .intro__wrap {
   color: @white;
+  // два следующих отступа складываются с отступами центровщика для позиционирования текста согласно макету
+  @media (min-width: @tablet-width) {
+    padding-left: 90px;
+  }
 
   @media (min-width: @desktop-width) {
     padding-left: 80px;
@@ -40,17 +48,5 @@
     color: @black;
     font-size: 20px;
     line-height: 22px;
-  }
-}
-
-.intro__choose-button {
-  margin-left: 20px;
-
-  @media (min-width: @tablet-width) {
-    margin-left: 30px;
-  }
-
-  @media (min-width: @desktop-width) {
-    margin-left: 190px;
   }
 }
