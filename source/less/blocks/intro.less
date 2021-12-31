@@ -1,24 +1,52 @@
 .intro {
+  background: linear-gradient(to bottom, @bg-green 302px, @white 158px);
+
+  @media (min-width: @tablet-width) {
+    background: none;
+  }
+
   img {
+    margin: 0 auto;
     margin-bottom: 138px;
+
+    @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
+      width: 708px;
+      height: 609px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 552px;
+      height: 499px;
+    }
   }
 }
 
 .intro__wrap {
-  background-image: url("../img/tongue-cat.jpg");
-  background-repeat: no-repeat;
-  background-size: 100% auto;
-  background-color: @bg-green;
   color: @white;
-  padding: 27px 35px 0;
+  // два следующих отступа складываются с отступами центровщика для позиционирования текста согласно макету
+  @media (min-width: @tablet-width) {
+    padding-left: 90px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 80px;
+  }
+}
+
+.intro__title {
+  @media (min-width: @tablet-width) {
+    color: @black;
+    background: none;
+  }
 }
 
 .intro__text {
   line-height: 14px;
   text-transform: uppercase;
-}
 
-.intro__form-button {
-  display: block;
-  margin: 0 auto;
+  @media (min-width: @tablet-width) {
+    color: @black;
+    font-size: 20px;
+    line-height: 22px;
+  }
 }
