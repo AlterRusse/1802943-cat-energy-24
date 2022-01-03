@@ -1,11 +1,17 @@
-.catalog {
-  padding: 27px 20px 25px;
-}
-
 .catalog__list {
   .clear-list();
-}
 
-.catalog__item {
-  padding: 19px 0 25px;
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 324px 324px;
+    column-gap: 60px;
+    row-gap: 141px;
+    align-items: baseline;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 245px 245px 245px 245px;
+    column-gap: 80px;
+    row-gap: 143px;
+  }
 }

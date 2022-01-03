@@ -1,3 +1,25 @@
 .extra-item {
   line-height: 14px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+.extra-item__wrap {
+  @media (min-width: @tablet-width) {
+    width: 632px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+}
+
+.extra-item__desktop-wrap {
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
 }
