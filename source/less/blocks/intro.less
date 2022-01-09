@@ -1,5 +1,10 @@
 .intro {
-  background: linear-gradient(to bottom, @bg-green 302px, @white 158px);
+  position: relative;
+  color: @white;
+
+  /*@media (max-width: @mobile-width-only) {
+    padding-bottom: 200px;
+  }*/
 
   @media (min-width: @tablet-width) {
     background: none;
@@ -9,20 +14,39 @@
     margin: 0 auto;
     margin-bottom: 138px;
 
+    @media (max-width: @mobile-width-only) {
+      content: "";
+      position: absolute;
+      width: 280px;
+      height: 270px;
+      top: 167px;
+    }
+
     @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
       width: 708px;
       height: 609px;
     }
 
     @media (min-width: @desktop-width) {
+      content: "";
+      position: absolute;
       width: 552px;
       height: 499px;
+      transform: translateX(85%);
+      top: -40px;
+      z-index: 2;
     }
   }
 }
 
 .intro__wrap {
-  color: @white;
+  @media (max-width: @mobile-width-only) {
+    padding-bottom: 200px;
+    text-align: center;
+    height: 302px;
+    background: url("../img/tongue-cat.jpg") 0 0/ 320px 302px no-repeat;
+  }
+
   // два следующих отступа складываются с отступами центровщика для позиционирования текста согласно макету
   @media (min-width: @tablet-width) {
     padding-left: 90px;
@@ -30,6 +54,23 @@
 
   @media (min-width: @desktop-width) {
     padding-left: 80px;
+    padding-bottom: 335px;
+  }
+
+  .intro__choose-button {
+    content: "";
+    position: absolute;
+    padding: 11px 0;
+    z-index: 3;
+
+    @media (max-width: @mobile-width-only) {
+      bottom: 0;
+    }
+
+    @media (min-width: @tablet-width) {
+      width: 244px;
+      padding: 17px 0;
+    }
   }
 }
 
@@ -41,6 +82,7 @@
 }
 
 .intro__text {
+  margin: 0 auto;
   line-height: 14px;
   text-transform: uppercase;
 

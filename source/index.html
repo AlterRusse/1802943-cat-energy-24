@@ -10,8 +10,8 @@
     <div class="header-intro-wrap">
       <div class="container">
         <header class="page-header">
-          <nav class="main-nav">
-            <a class="page-header__logo">
+          <nav class="main-nav main-nav--opened main-nav--nojs">
+            <a class="main-nav__logo">
               <img src="img/cat-icon.svg" alt="Ававатарка кота" width="33" height="38">
               <img src="img/title-logo.svg" alt="Cat-Energy" width="101" height="18">
               <span class="visually-hidden">на главную</span>
@@ -19,20 +19,20 @@
             <button class="main-nav__toggle" type="button">
               <span class="visually-hidden">открыть меню</span>
             </button>
-            <!-- Для открытия всплывающего меню удалить класс main-nav__wrap--closed -->
-            <ul class="main-nav__list main-nav__list--closed site-list">
+            <!-- Для открытия всплывающего меню удалить класс main-nav--closed -->
+            <ul class="main-nav__list site-list">
               <li class="site-list__item site-list__item--active">
-                <a class="site-list__link site-list__link--white">
+                <a class="site-list__link">
                   главная
                 </a>
               </li>
               <li class="site-list__item">
-                <a class="site-list__link site-list__link--white" href="catalog.html">
+                <a class="site-list__link" href="catalog.html">
                   каталог продукции
                 </a>
               </li>
               <li class="site-list__item">
-                <a class="site-list__link site-list__link--white" href="form.html">
+                <a class="site-list__link" href="form.html">
                   подобрать программу
                 </a>
               </li>
@@ -146,7 +146,10 @@
           <h2 class="contacts__title title title--small-tall title--black-one title--uppercase">приглашаем к сотрудничеству дилеров!</h2>
           <address class="contacts__adress">ул. Большая Конюшенная, д. 19/8 <br> Санкт-Петербург</address>
         </div>
-        <img src="img/shop-map.png" alt="Местонахождение магазина">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.603625300316!2d30.320858716173465!3d59.93871916905408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1641659847868!5m2!1sru!2sru"
+        style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
+
       </footer>
     </main>
 
@@ -192,5 +195,23 @@
         </a>
       </div>
     </footer>
+
+    <script>
+      var navMain = document.querySelector('.main-nav');
+      var navToggle = document.querySelector('.main-nav__toggle');
+
+      navMain.classList.remove('main-nav--nojs');
+
+      navToggle.addEventListener('click', function() {
+        if (navMain.classList.contains('main-nav--closed')) {
+          navMain.classList.remove('main-nav--closed');
+          navMain.classList.add('main-nav--opened');
+        }
+        else {
+          navMain.classList.add('main-nav--closed');
+          navMain.classList.remove('main-nav--opened');
+        }
+      });
+    </script>
   </body>
 </html>

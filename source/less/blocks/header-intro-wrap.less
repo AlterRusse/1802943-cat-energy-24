@@ -1,31 +1,21 @@
 .header-intro-wrap {
   @media (min-width: @desktop-width) {
-    background: linear-gradient(to right, @white 50%, @bg-green 50%);
+    //цвет фона не тот - подберу попозже
+    background: linear-gradient(to right, @white 50%, @dark-green 50%);
     background-size: 100% auto;
   }
-}
 
-.header-intro-wrap::after {
-  content: "";
-  width: 320px;
-  height: 302px;
-  background-image: url("../img/tongue-cat.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  top: 65px;
-  left: 50%;
-  transform: translateX(-50%);
-
-  @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
-    display: none;
-  }
-
-  @media (min-width: @desktop-width) {
-    background-image: url("../img/tongue-cat.jpg");
-    background-repeat: no-repeat;
-    top: 0;
-    left: 75%;
-    width: 720px;
-    height: 694px;
+  &::after {
+    @media (min-width: @desktop-width) {
+      content: "";
+      position: absolute;
+      background-image: url("../img/tongue-cat.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      top: 0;
+      right: 0;
+      width: 720px;
+      height: 694px;
+    }
   }
 }

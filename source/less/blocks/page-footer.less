@@ -1,5 +1,36 @@
 .page-footer {
   background-color: @bg-lite-grey;
+
+  .page-footer__list {
+    display: flex;
+    justify-content: center;
+
+    @media (max-width: @mobile-width-only) {
+      width: 100%;
+      padding-top: 22px;
+      padding-bottom: 23px;
+      border-top: 1px solid @grey-nine;
+      border-bottom: 1px solid @grey-nine;
+    }
+  }
+}
+
+.social-list__item:not(:last-child) {
+  margin-right: 38px;
+}
+//что-то с svg-шкой facebook - исправить
+.social-list__item a {
+  outline: none;
+  fill: @grey-six;
+
+  &:hover {
+    fill: @basic-green;
+  }
+
+  &:focus {
+    fill: @basic-green;
+    opacity: 0.3;
+  }
 }
 
 .page-footer__wrap {
@@ -14,6 +45,19 @@
   }
 }
 
+.page-footer__logo {
+  padding-top: 39px;
+  padding-bottom: 32px;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:focus {
+    opacity: 0.6;
+  }
+}
+
 .page-footer__developer-link {
   .text-decor();
 
@@ -23,8 +67,22 @@
   color: @black;
   font-family: "Arial", sans-serif;
   font-size: 16px;
-}
+  outline: none;
+  fill: @grey-six;
 
-.page-footer__list {
-  display: flex;
+  &:hover {
+    fill: @basic-green;
+    color: @basic-green;
+  }
+
+  &:focus {
+    fill: @basic-green;
+    color: @basic-green;
+    opacity: 0.3;
+  }
+
+  @media (max-width: @mobile-width-only) {
+    padding-top: 22px;
+    padding-bottom: 22px;
+  }
 }

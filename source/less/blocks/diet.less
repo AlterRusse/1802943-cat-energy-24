@@ -1,3 +1,7 @@
+.diet {
+  margin-top: 82px;
+}
+
 .diet__list {
   .clear-list();
   width: 280px;
@@ -45,12 +49,56 @@
 .diet__link {
   .text-decor();
 
+  position: relative;
+  display: block;
+  width: 127px;
   text-transform: uppercase;
   color: @black;
+  outline: none;
 
   @media (min-width: @tablet-width) {
+    width: 160px;
     font-size: 20px;
     line-height: 30px;
+  }
+
+  &:focus {
+    opacity: 0.3;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    box-sizing: border-box;
+    width: 22px;
+    height: 2px;
+    border: 1px solid @black;
+    right: 10px;
+    top: 50%;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    border: 5px solid transparent;
+    border-left: 5px solid @black;
+    right: 3px;
+    top: 27%;
+
+    @media (min-width: @tablet-width) {
+      top: 37%;
+    }
+  }
+
+  &:hover::before,
+  &:focus::before {
+    width: 30px;
+    right: 2px;
+  }
+
+  &:hover::after,
+  &:focus::after {
+    right: -5px;
   }
 }
 

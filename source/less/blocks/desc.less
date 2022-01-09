@@ -1,7 +1,9 @@
 .desc__list {
   .clear-list();
 
-  padding-left: 80px;
+  @media (max-width: @mobile-width-only) {
+    padding-left: 80px;
+  }
 
   @media (min-width: @tablet-width) {
     padding: 0;
@@ -17,8 +19,98 @@
 }
 
 .desc__item {
+  position: relative;
+
+  @media (max-width: @mobile-width-only) {
+    width: 176px;
+  }
+
   @media (min-width: @tablet-width) {
     font-size: 16px;
     line-height: 24px;
+    padding-top: 111px;
+  }
+}
+
+.desc__item:not(:last-child) {
+  @media (max-width: @mobile-width-only) {
+    margin-bottom: 26px;
+  }
+}
+
+.desc__item--leaflet {
+  &::before {
+    content: "";
+    width: 60px;
+    height: 60px;
+    background-image: url("../img/leaflet.svg");
+    background-repeat: no-repeat;
+    position: absolute;
+    left: -80px;
+
+    @media (min-width: @tablet-width) {
+      width: 80px;
+      height: 80px;
+      background-size: cover;
+      top: 0;
+      left: 0;
+    }
+  }
+}
+
+.desc__item--powder {
+  &::before {
+    content: "";
+    width: 60px;
+    height: 60px;
+    background-image: url("../img/powder.svg");
+    position: absolute;
+    left: -80px;
+
+    @media (min-width: @tablet-width) {
+      width: 80px;
+      height: 80px;
+      background-size: cover;
+      top: 0;
+      left: 0;
+    }
+  }
+}
+
+.desc__item--food {
+  &::before {
+    content: "";
+    width: 60px;
+    height: 60px;
+    background-image: url("../img/food.svg");
+    position: absolute;
+    left: -80px;
+
+    @media (min-width: @tablet-width) {
+      width: 80px;
+      height: 80px;
+      background-size: cover;
+      top: 0;
+      left: 0;
+    }
+  }
+}
+
+.desc__item--clock {
+  &::before {
+    content: "";
+    width: 60px;
+    height: 60px;
+    background-image: url("../img/clock.svg");
+    position: absolute;
+    left: -80px;
+
+    @media (min-width: @tablet-width) {
+      width: 80px;
+      height: 80px;
+      background-size: cover;
+      top: 0;
+      left: 0;
+    }
   }
 }

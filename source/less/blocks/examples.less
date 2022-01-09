@@ -1,5 +1,5 @@
 .examples {
-  background-color: @bg-lite-grey;
+  background-color: @grey-eaea;
 
   @media (min-width: @tablet-width) {
     background-color: @white;
@@ -44,9 +44,58 @@
 .examples__stats-wrap {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
+  text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
 
   @media (min-width: @desktop-width) {
     width: 366px;
+  }
+}
+
+.examples__item-box {
+  position: relative;
+  text-align: center;
+  border: 1px solid @grey-cdcd;
+  width: 124px;
+  border-radius: 3px;
+  padding-top: 15px;
+  padding-bottom: 17px;
+
+  @media (min-width: @tablet-width) {
+    width: 162px;
+  }
+
+  span {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    text-transform: lowercase;
+    width: 87px;
+    height: 31px;
+    left: 18%;
+    bottom: -15px;
+    background-color: @grey-eaea;
+
+    @media (min-width: @tablet-width) {
+      background-color: @white;
+      width: 114px;
+    }
+
+    @media (min-width: @desktop-width) {
+      background-color: @bg-lite-grey;
+    }
+  }
+}
+
+.examples__item-text {
+  @media (min-width: @tablet-width) {
+    width: 174px;
+    text-align: end;
   }
 }
 
