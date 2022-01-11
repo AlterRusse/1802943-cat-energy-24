@@ -1,5 +1,7 @@
 .examples {
   background-color: @grey-eaea;
+  padding-top: 25px;
+  padding-bottom: 40px;
 
   @media (min-width: @tablet-width) {
     background-color: @white;
@@ -13,12 +15,18 @@
 
     @media (min-width: @desktop-width) {
       width: 1220px;
-      padding: 0 110px;
+      padding-left: 110px;
+      padding-right: 110px;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
     }
   }
+}
+
+.examples__title {
+  margin-top: 0;
+  margin-bottom: 45px;
 }
 
 .examples__wrap {
@@ -41,11 +49,16 @@
   }
 }
 
+.examples__text {
+  font-family: "Arial", sans-serif;
+}
+
 .examples__stats-wrap {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   text-transform: uppercase;
+  color: @black;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -72,18 +85,18 @@
 
   span {
     content: "";
+    font-family: "Arial", sans-serif;
+    font-size: 12px;
+    line-height: 12px;
     position: absolute;
     z-index: 2;
     text-transform: lowercase;
-    width: 87px;
-    height: 31px;
     left: 18%;
     bottom: -15px;
     background-color: @grey-eaea;
 
     @media (min-width: @tablet-width) {
       background-color: @white;
-      width: 114px;
     }
 
     @media (min-width: @desktop-width) {
@@ -92,7 +105,17 @@
   }
 }
 
+.examples__weight {
+  width: 77px;
+}
+
+.examples__time {
+  width: 87px;
+}
+
 .examples__item-text {
+  margin: 34px auto 40px;
+
   @media (min-width: @tablet-width) {
     width: 174px;
     text-align: end;
@@ -100,8 +123,40 @@
 }
 
 .examples__buttons-wrap {
+  position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  margin: 15px auto 0;
+  width: 210px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 86px;
+    height: 14px;
+    background-color: @white;
+    border: 1px solid @grey-cdcd;
+    border-radius: 6px;
+    transform: translate(67%, 15%);
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 36px;
+    height: 6px;
+    background-color: @basic-green;
+    border-radius: 6px;
+    z-index: 2;
+    left: 31%;
+    top: 43%;
+  }
+}
+
+.examples__button {
+  cursor: pointer;
+  border: none;
+  background-color: @grey-eaea;
 }
 
 .examples__grad {

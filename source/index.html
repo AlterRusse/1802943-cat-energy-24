@@ -19,7 +19,6 @@
             <button class="main-nav__toggle" type="button">
               <span class="visually-hidden">открыть меню</span>
             </button>
-            <!-- Для открытия всплывающего меню удалить класс main-nav--closed -->
             <ul class="main-nav__list site-list">
               <li class="site-list__item site-list__item--active">
                 <a class="site-list__link">
@@ -81,16 +80,16 @@
       <section class="desc container">
         <h2 class="desc__title title title--big-tall title--black">Как это работает</h2>
         <ul class="desc__list">
-          <li class="desc__item desc__item--leaflet">
+          <li class="desc__item desc__item--leaflet desc__item--one">
               Функциональное питание содержит только полезные питательные вещества.
           </li>
-          <li class="desc__item desc__item--powder">
+          <li class="desc__item desc__item--powder desc__item--two">
               Выпускается в виде порошка, который нужно лишь залить кипятком и готово.
           </li>
-          <li class="desc__item desc__item--food">
+          <li class="desc__item desc__item--food desc__item--three">
               Замените один-два приема обычной еды на наше функциональное питание.
           </li>
-          <li class="desc__item desc__item--clock">
+          <li class="desc__item desc__item--clock desc__item--four">
               Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!
           </li>
         </ul>
@@ -112,11 +111,11 @@
                 <div class="examples__stats-wrap">
                   <p class="examples__item-box">
                     5 КГ
-                    <span>снижение веса</span>
+                    <span class="examples__weight">снижение веса</span>
                   </p>
                   <p class="examples__item-box">
                     60 ДНЕЙ
-                    <span>затрачено времени</span>
+                    <span class="examples__time">затрачено времени</span>
                   </p>
                   <p class="examples__item-text">
                     Затраты на питание: 15 000 РУБ.
@@ -127,11 +126,11 @@
               <div class="examples__wrap">
                 <img src="img/fat-cat.png" alt="Весьма упитанный кот">
                 <div class="examples__buttons-wrap until-after">
-                  <button class="until-after__button until-after__button--before" type="button">
+                  <button class="examples__button examples__button--before" type="button">
                     было
                   </button>
-                  <div class="until-after__range-wrap"></div>
-                  <button class="until-after__button until-after__button--after" type="button">
+
+                  <button class="examples__button examples__button--after" type="button">
                     стало
                   </button>
                 </div>
