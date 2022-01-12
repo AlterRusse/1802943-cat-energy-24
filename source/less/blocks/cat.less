@@ -1,0 +1,37 @@
+.cat {
+  @media (max-width: @mobile-width-only) {
+    display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    width: 592px;
+  }
+}
+
+.cat__condition {
+  content: "";
+  position: relative;
+  height: 511px;
+  overflow: hidden;
+  width: 50%;
+
+  img {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 100%;
+  }
+
+  &--fat-part {
+    img {
+      left: 0;
+    }
+  }
+
+  &--slim-part {
+    img {
+      right: 0;
+    }
+  }
+}
