@@ -5,6 +5,11 @@
     background-color: @bg-lite-grey;
   }
 
+  @media (min-width: @desktop-width) {
+    padding-top: 95px;
+    padding-bottom: 107px;
+  }
+
   iframe {
     display: block;
     width: 100%;
@@ -12,6 +17,13 @@
 
     @media (min-width: @tablet-width) {
       height: 400px;
+    }
+
+    @media (min-width: @desktop-width) {
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
     }
   }
 }
@@ -37,13 +49,11 @@
   }
 
   @media (min-width: @desktop-width) {
-    content: "";
-    position: absolute;
     background-color: @white;
     width: 565px;
     padding: 60px 80px 56px;
-    left: 110px;
-    top: 95px;
+    position: relative;
+    z-index: 2;
   }
 }
 

@@ -5,6 +5,7 @@
 .page-footer__list {
   display: flex;
   justify-content: center;
+  align-items: center;
 
   @media (max-width: @mobile-width-only) {
     width: 100%;
@@ -22,7 +23,7 @@
 .social-list__item:not(:last-child) {
   margin-right: 38px;
 }
-//что-то с svg-шкой facebook - исправить
+
 .social-list__item a {
   outline: none;
   fill: @grey-six;
@@ -33,6 +34,20 @@
 
   &:focus {
     fill: @basic-green;
+    opacity: 0.3;
+  }
+}
+
+.social-list__facebook {
+  fill: @bg-lite-grey;
+  stroke: @grey-six;
+
+  &:hover {
+    stroke: @basic-green;
+  }
+
+  &:focus {
+    stroke: @basic-green;
     opacity: 0.3;
   }
 }
@@ -67,12 +82,13 @@
 
   width: 280px;
   justify-content: space-between;
+  align-items: center;
   display: flex;
   color: @black;
   font-family: "Arial", sans-serif;
   font-size: 16px;
   outline: none;
-  fill: @grey-six;
+
 
   &:hover {
     fill: @basic-green;

@@ -8,6 +8,10 @@
     padding-bottom: 0;
     background-color: @white;
   }
+
+  @media (min-width: @tablet-width) {
+    padding-top: 0;
+  }
 }
 
 .examples__container {
@@ -44,6 +48,7 @@
     width: 708px;
     font-size: 16px;
     line-height: 24px;
+    margin-bottom: 85px;
   }
 
   @media (min-width: @desktop-width) {
@@ -83,7 +88,6 @@
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 20px;
-    margin-bottom: 255px;
   }
 
   @media (min-width: @desktop-width) {
@@ -228,20 +232,13 @@
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
-    position: relative;
+    padding: 0;
+    margin: 0 10px;
+    border-bottom: 1px dotted @grey-cdcd;
   }
 
   @media (min-width: @desktop-width) {
     background-color: @bg-lite-grey;
-
-    &::after {
-      content: "";
-      position: absolute;
-      width: 75%;
-      border-bottom: 1px dotted @grey-cdcd;
-      left: 15%;
-      bottom: -1px;
-    }
   }
 }
 
@@ -253,7 +250,7 @@
     background-color: @grey-cdcd;
     position: relative;
 
-    &::after {
+    button {
       content: "";
       position: absolute;
       width: 34px;
@@ -261,7 +258,7 @@
       border-radius: 50%;
       background-color: @basic-green;
       border: 12px solid @white;
-      outline: 1px solid @grey-cdcd;
+      box-shadow: 0 0 0 1px @grey-cdcd;
       box-sizing: border-box;
       left: 45%;
       bottom: -15px;
