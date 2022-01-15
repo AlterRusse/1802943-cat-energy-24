@@ -32,10 +32,16 @@
 
 .examples__title {
   margin-top: 0;
-  margin-bottom: 45px;
+  margin-bottom: 40px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 43px;
+    margin-bottom: 63px;
+  }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 76px;
+    margin-top: 0;
+    margin-bottom: 146px;
   }
 }
 
@@ -53,8 +59,8 @@
 
   @media (min-width: @desktop-width) {
     margin: 0;
-    padding-top: 70px;
     width: 570px;
+    align-self: flex-end;
   }
 }
 
@@ -72,6 +78,7 @@
 
   @media (min-width: @desktop-width) {
     width: 436px;
+    margin-bottom: 69px;
   }
 }
 
@@ -228,6 +235,8 @@
   cursor: pointer;
   border: none;
   background-color: @grey-eaea;
+  font-size: 16px;
+  line-height: 20px;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -249,20 +258,20 @@
     border-radius: 6px;
     background-color: @grey-cdcd;
     position: relative;
+  }
+}
 
-    button {
-      content: "";
-      position: absolute;
-      width: 34px;
-      height: 34px;
-      border-radius: 50%;
-      background-color: @basic-green;
-      border: 12px solid @white;
-      box-shadow: 0 0 0 1px @grey-cdcd;
-      box-sizing: border-box;
-      left: 45%;
-      bottom: -15px;
-    }
+.examples__slider {
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    width: 34px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: @basic-green;
+    border: 12px solid @white;
+    box-shadow: 0 0 0 1px @grey-cdcd;
+    left: 45%;
+    bottom: -15px;
   }
 }
 
