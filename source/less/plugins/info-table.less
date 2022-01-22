@@ -1,16 +1,38 @@
 .info-table {
   font-size: 12px;
   line-height: 16px;
-  padding-left: 140px;
   width: 140px;
+  margin-bottom: 22px;
+  border-collapse: collapse;
 
   @media (min-width: @tablet-width) {
     width: 250px;
     padding: 0;
     font-size: 16px;
+    margin: 0 auto;
   }
 
+  @media (min-width: @desktop-width) {
+    width: 169px;
+  }
+}
+
+.info-table__row {
   @media (min-width: @tablet-width) {
-    width: 170px;
+    border-bottom: 1px solid @grey-cdcd;
+    margin-bottom: 7px;
+  }
+}
+
+.info-table__cell {
+  padding: 0;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 7px;
+    padding-bottom: 9px;
+  }
+
+  &:last-child {
+    text-align: end;
   }
 }

@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <div class="container">
-      <header class="page-header">
-        <nav class="main-nav">
-          <a class="page-header__logo" href="index.html">
+    <header class="page-header page-header--bordered">
+      <div class="container">
+        <nav class="main-nav main-nav--closed main-nav--nojs">
+          <a class="main-nav__logo" href="index.html">
             <img src="img/cat-icon.svg" alt="Ававатарка кота" width="33" height="38">
             <img src="img/title-logo.svg" alt="Cat-Energy" width="101" height="18">
             <span class="visually-hidden">на главную</span>
@@ -18,38 +18,36 @@
           <button class="main-nav__toggle" type="button">
             <span class="visually-hidden">открыть меню</span>
           </button>
-          <!-- Для открытия всплывающего меню удалить класс main-nav__wrap--closed -->
-          <ul class="main-nav__list main-nav__list--closed site-list">
+          <ul class="main-nav__list site-list">
             <li class="site-list__item">
               <a class="site-list__link" href="index.html">
                 главная
               </a>
             </li>
-            <li class="site-list__item">
+            <li class="site-list__item site-list__item--active">
               <a class="site-list__link">
                 каталог продукции
               </a>
             </li>
-            <li class="site-list__item site-list__item--active">
+            <li class="site-list__item">
               <a class="site-list__link" href="form.html">
                 подобрать программу
               </a>
             </li>
           </ul>
         </nav>
-      </header>
-    </div>
+      </div>
+    </header>
+
 
     <main class="page-main">
-      <section class="catalog container">
-        <h1 class="catalog__title title title--big title--black">Каталог продукции</h1>
+      <section class="catalog">
+        <h1 class="catalog__title title title--big title--black container">Каталог продукции</h1>
         <ul class="catalog__list">
           <li class="catalog__item">
             <div class="product">
               <div class="product__wrap">
-                <a class="product__link" href="#">
-                  <img src="img/chicken-500.png" alt="Со вкусом курицы 500 г" width="68" height="86">
-                </a>
+                <a class="product__link" href="#" style="--bg-glass: url('../img/chicken-500.png')"></a>
                 <div class="product__info">
                   <p class="product__name">Cat Energy PRO 500 г</p>
                   <table class="product__table info-table">
@@ -76,9 +74,7 @@
           <li class="catalog__item">
             <div class="product">
               <div class="product__wrap">
-                <a class="product__link" href="#">
-                  <img src="img/chicken-1000.png" alt="Со вкусом курицы 1000 г" width="84" height="101">
-                </a>
+                <a class="product__link" href="#" style="--bg-glass: url('../img/chicken-1000.png')"></a>
                 <div class="product__info">
                   <p class="product__name">Cat Energy PRO 1000 г</p>
                   <table class="product__table info-table">
@@ -105,9 +101,7 @@
           <li class="catalog__item">
             <div class="product">
               <div class="product__wrap">
-                <a class="product__link" href="#">
-                  <img src="img/fish-500.png" alt="Со вкусом рыбы 500 г" width="68" height="86">
-                </a>
+                <a class="product__link" href="#" style="--bg-glass: url('../img/fish-500.png')"></a>
                 <div class="product__info">
                   <p class="product__name">Cat Energy PRO 500 г</p>
                   <table class="product__table info-table">
@@ -134,9 +128,7 @@
           <li class="catalog__item">
             <div class="product">
               <div class="product__wrap">
-                <a class="product__link" href="#">
-                  <img src="img/fish-1000.png" alt="Со вкусом рыбы 1000 г" width="84" height="101">
-                </a>
+                <a class="product__link" href="#" style="--bg-glass: url('../img/fish-1000.png')"></a>
                 <div class="product__info">
                   <p class="product__name">Cat Energy PRO 500 г</p>
                   <table class="product__table info-table">
@@ -163,9 +155,7 @@
           <li class="catalog__item">
             <div class="product">
               <div class="product__wrap">
-                <a class="product__link" href="#">
-                  <img src="img/buckwheat-500.png" alt="Со вкусом гречки 500 г" width="68" height="86">
-                </a>
+                <a class="product__link" href="#" style="--bg-glass: url('../img/buckwheat-500.png')"></a>
                 <div class="product__info">
                   <p class="product__name">Cat Energy slim 500 г</p>
                   <table class="product__table info-table">
@@ -192,9 +182,7 @@
           <li class="catalog__item">
             <div class="product">
               <div class="product__wrap">
-                <a class="product__link" href="#">
-                  <img src="img/buckwheat-1000.png" alt="Со вкусом гречки 1000 г" width="84" height="101">
-                </a>
+                <a class="product__link" href="#" style="--bg-glass: url('../img/buckwheat-1000.png')"></a>
                 <div class="product__info">
                   <p class="product__name">Cat Energy slim 1000 г</p>
                   <table class="product__table info-table">
@@ -221,9 +209,7 @@
           <li class="catalog__item">
             <div class="product">
               <div class="product__wrap">
-                <a class="product__link" href="#">
-                  <img src="img/rice-500.png" alt="Со вкусом риса 500 г" width="68" height="86">
-                </a>
+                <a class="product__link" href="#" style="--bg-glass: url('../img/rice-500.png')"></a>
                 <div class="product__info">
                   <p class="product__name">Cat Energy slim 500 г</p>
                   <table class="product__table info-table">
@@ -257,9 +243,11 @@
         </ul>
       </section>
 
-      <section class="extra-products container">
-        <h2 class="extra-products__title title title--medium title--black">Дополнительные товары</h2>
-        <div class="flex-wrap">
+      <section class="extra-products">
+        <div class="extra-products__wrap container">
+          <h2 class="extra-products__title title title--medium title--black">Дополнительные товары</h2>
+        </div>
+        <div class="flex-wrap flex-wrap--extra-products container">
           <ul class="extra-products__list">
             <li class="extra-products__item extra-item">
               <div class="extra-item__desktop-wrap">
@@ -319,23 +307,27 @@
             </li>
           </ul>
           <p class="extra-products__order-all">
-            Закажите все и получите чехол для кота в подарок!
+            <span>Закажите все и получите чехол для кота в подарок!</span>
           </p>
         </div>
       </section>
 
       <footer class="contacts contacts--grey">
-        <div class="contacts__content-wrap container">
-          <h2 class="contacts__title title title--small-tall title--black-one title--uppercase">приглашаем к сотрудничеству дилеров!</h2>
-          <address class="contacts__adress">ул. Большая Конюшенная, д. 19/8 <br> Санкт-Петербург</address>
+        <div class="container">
+          <div class="contacts__content-wrap">
+            <h2 class="contacts__title title title--small-tall title--black-one title--uppercase">приглашаем к сотрудничеству дилеров!</h2>
+            <address class="contacts__adress">ул. Большая Конюшенная, д. 19/8 <br> Санкт-Петербург</address>
+          </div>
         </div>
-        <img src="img/shop-map.png" alt="Расположение магазина">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.603625300316!2d30.320858716173465!3d59.93871916905408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1641659847868!5m2!1sru!2sru"
+        style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
       </footer>
     </main>
 
     <footer class="page-footer">
       <div class="page-footer__wrap container">
-        <a class="page-footer__logo" href="index.html">
+        <a class="page-footer__logo">
           <img src="img/title-logo.svg" alt="Cat-Energy" width="101" height="18">
           <span class="visually-hidden">на главную</span>
         </a>
@@ -359,8 +351,8 @@
           </li>
           <li class="social-list__item">
             <a href="https://www.facebook.com/htmlacademy">
-              <svg aria-hidden="true" focusable="false" width="13" height="20" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.5.83H8.75c-1.22 0-2.38.48-3.24 1.32a4.45 4.45 0 0 0-1.34 3.18v2.7H1.42v3.59h2.75v7.19h3.66v-7.2h2.75l.92-3.59H7.83v-2.7c0-.23.1-.46.27-.63.17-.17.4-.26.65-.26h2.75V.83Z" stroke="#666" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/>
+              <svg class="social-list__facebook" aria-hidden="true" focusable="false"width="15" height="29" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M14 0.75H10.5C8.95292 0.75 7.46919 1.46024 6.37523 2.72447C5.28127 3.98871 4.66669 5.70337 4.66669 7.49127V11.536H1.16669V16.929H4.66669V27.7151H9.33335V16.929H12.8334L14 11.536H9.33335V7.49127C9.33335 7.13369 9.45627 6.79076 9.67506 6.53791C9.89386 6.28506 10.1906 6.14302 10.5 6.14302H14V0.75Z"/>
               </svg>
               <span class="visually-hidden">мы в фэйсбук</span>
             </a>
@@ -375,5 +367,7 @@
         </a>
       </div>
     </footer>
+
+    <script src="js/toggle-button.js"></script>
   </body>
 </html>

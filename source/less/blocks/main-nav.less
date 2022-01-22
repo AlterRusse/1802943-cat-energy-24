@@ -1,28 +1,112 @@
 .main-nav {
+  position: relative;
   font-size: 20px;
   line-height: 20px;
   text-transform: uppercase;
-  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
   color: @black;
+  padding-top: 10px;
+  padding-bottom: 17px;
+  box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
     font-size: 18px;
     line-height: 24px;
+    padding-top: 26px;
+    padding-bottom: 0;
   }
 
   @media (min-width: @desktop-width) {
     font-size: 20px;
     line-height: 30px;
+    padding-top: 53px;
+  }
+}
+
+.main-nav__toggle {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+@media (max-width: @mobile-width-only) {
+  .main-nav--closed .site-list__item {
+    display: none;
+  }
+
+  .main-nav--closed .main-nav__toggle {
+    padding: 15px;
+    border: none;
+    background-color: @white;
+    cursor: pointer;
+  }
+
+  .main-nav__toggle::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    right: 3px;
+    width: 24px;
+    height: 2px;
+    background-color: @black;
+    box-shadow: 0 8px 0 0 @black, 0 16px 0 0 @black;
+  }
+
+  .main-nav--opened .main-nav__toggle {
+    padding: 12px;
+    border: none;
+    background-color: @white;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 27px;
+      right: 3px;
+      width: 18px;
+      height: 2px;
+      background-color: @black;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+      box-shadow: none;
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  .main-nav--nojs {
+    flex-direction: column;
+
+    .main-nav__toggle {
+      display: none;
+    }
+  }
+
+  .main-nav--nojs .main-nav__list {
+    position: static;
+    min-height: 0;
+  }
+
+  .main-nav--nojs .site-list__item {
+    display: block;
   }
 }
 
 .main-nav__list {
-  &--closed {
-    display: none;
+  @media (max-width: @mobile-width-only) {
+    position: absolute;
+    top: 52px;
+    left: -20px;
+    text-align: center;
+    width: 320px;
+    background-color: @white;
   }
 
   @media (min-width: @tablet-width) {
@@ -34,11 +118,23 @@
   }
 }
 
-.main-nav__toggle {
-  width: 24px;
-  height: 16px;
+.main-nav__logo {
+  .text-decor();
 
-  @media (min-width: @tablet-width) {
-    display: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 190px;
+
+  @media (max-width: @mobile-width-only) {
+    height: 38px;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:focus {
+    opacity: 0.3;
   }
 }

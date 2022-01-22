@@ -6,8 +6,18 @@
   color: @white;
   text-align: center;
   text-transform: uppercase;
-  font-family: "Oswald", sans-serif;
-  background-color: @bg-green;
+  font-family: "Oswald", "Arial", sans-serif;
+  background-color: @basic-green;
+  outline: none;
+
+  &:hover {
+    background-color: @dark-green;
+  }
+
+  &:focus {
+    background-color: @dark-green;
+    color: @white-opacity-three;
+  }
 
   &--grey {
     background-color: @bg-lite-grey;

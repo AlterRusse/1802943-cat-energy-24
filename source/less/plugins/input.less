@@ -1,9 +1,118 @@
+.input {
+  &--email {
+    @media (min-width: @desktop-width) {
+      width: 570px;
+      margin-bottom: 0;
+    }
+  }
+
+  &--tel {
+    @media (min-width: @desktop-width) {
+      width: 570px;
+      margin-bottom: 0;
+    }
+  }
+}
+
+
 .input__text {
+  font-family: "Oswald", "Arial", sans-serif;
+  color: @dark-grey;
+  padding: 13px 0 14px 15px;
+  border: 1px solid @grey-e-seven;
   font-size: 16px;
+  line-height: 18px;
   text-transform: uppercase;
+  flex-grow: 1;
+  outline: none;
+
+  &::placeholder {
+    color: @dark-grey;
+  }
+
+  &:hover {
+    border: 1px solid @grey-cdcd;
+  }
+
+  &:focus {
+    border: 2px solid @dark-grey;
+    padding: 9px 0 9px 20px;
+  }
+
+  &:required {
+    border: 2px solid @input-error;
+    padding: 9px 0 9px 20px;
+  }
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
+    padding: 10px 0 10px 20px;
+  }
+}
+
+.input__wrap {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.input__button {
+  position: absolute;
+  border: none;
+  width: 40px;
+  height: 45px;
+  border-left: none;
+  right: 2px;
+  padding-top: 4px;
+  background-color: @white;
+  cursor: pointer;
+
+  &--envelope {
+    svg {
+      fill: none;
+      stroke: @black-two;
+    }
+  }
+
+  &--handset {
+    svg {
+      fill: @black-two;
+      stroke: none;
+    }
+  }
+}
+
+.input__text:required + .input__button {
+  &--envelope {
+    svg {
+      fill: none;
+      stroke: @input-error;
+    }
+  }
+
+  &--handset {
+    svg {
+      fill: @input-error;
+      stroke: none;
+    }
+  }
+}
+
+.input__text:focus + .input__button {
+  &--envelope {
+    svg {
+      fill: none;
+      stroke: @basic-green;
+    }
+  }
+
+  &--handset {
+    svg {
+      fill: @basic-green;
+      stroke: none;
+    }
   }
 }
